@@ -1,5 +1,7 @@
 import React from "react";
 import "../assets/css/components.css";
+import caution from '../assets/images/caution.png'
+import carry from '../assets/images/carry.png'
 
 import { genericComments as genericComments } from "./Arrays.tsx";
 
@@ -21,7 +23,7 @@ function Warnings({ typo, about, size }) {
             border: 'none',
           }}
         >
-          <div style={{margin: '0.4em'}}>XXX</div>
+          <div style={{margin: '0.5em', display: 'flex', alignItems:'center'}}><img style={{width: '1.6rem'}} src={caution} alt="!"/></div>
           <div style={{margin: '0.4em'}}>{genericComments[0].personalityWarning}</div>
         </div>
        : null}
@@ -40,7 +42,7 @@ function Warnings({ typo, about, size }) {
             border: 'none',
           }}
         >
-          <div style={{margin: '0.4em'}}>Oo0</div>
+          <div style={{margin: '0.5em', display: 'flex', alignItems:'center'}}><img style={{width: '1.6rem'}} src={carry} alt="!"/></div>
           <div style={{margin: '0.4em'}}>{genericComments[0].stackWarning}</div>
         </div>
       : null}

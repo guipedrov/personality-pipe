@@ -9,15 +9,14 @@ import { jungx as jung } from "./Arrays.tsx"
 
 import MenuItem from "./MenuItem.jsx"
 
-function MenuRoll({ categoryMenu, type, newType, customH, customW, chosen, direct, stick }) {
+function MenuRoll({ categoryMenu, type, newType, customH, customW, chosen, direct, stick, bg, shadow }) {
   const [listagem, setListagem] = useState([{name: "Carregando", desc: ""}])
   const [all, setAll] = useState("Todos")
-
-  console.log("######Menu Roll",type)
   
   const listagemSemTodos = listagem.filter((duckTape) => {
     return duckTape.name != ("Todos" || "All")
   })
+  console.log(listagemSemTodos)
 
   function onAll() {
     if (categoryMenu === "as4letrasEnglish") {
@@ -47,7 +46,7 @@ function MenuRoll({ categoryMenu, type, newType, customH, customW, chosen, direc
 
   return (
     <>
-      <div className="menu-roll-container">
+      <div className="menu-roll-container" style={{boxShadow: `${shadow} 1px 1px 6px 2px inset`,	background: `${bg}`}}>
         <Link style={{textDecoration: 'none', color: 'inherit', margin: '0px -8px 0px -2px'}} to={`/t/`+`${categoryMenu}`+`/`}>
         <div className="pseudoitem Todos" onClick={()=>{newType("Todos")}}>{all}</div>
         </Link>

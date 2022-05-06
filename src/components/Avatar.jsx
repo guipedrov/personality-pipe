@@ -41,7 +41,7 @@ function Avatar({ url, numCode, type, size }) {
         {(url === "as4letras" && type === "ENTP") ? <img style={{width: `${size}`}} src={avatarENTP} alt="ESFP"/> : null}
         {(url === "as4letras" && type === "ENTJ") ? <img style={{width: `${size}`}} src={avatarENTJ} alt="ESFP"/> : null}
         {(url === "as4letras" && type === "INTP") ? <img style={{width: `${size}`}} src={avatarINTP} alt="ESFP"/> : null}
-        {(url === "as4letras" && type === "INTJ") ? <img style={{width: `${size}`}} src={avatarESTJ} alt="ESFP"/> : null}
+        {(url === "as4letras" && type === "INTJ") ? <img style={{width: `${size}`}} src={avatarINTJ} alt="ESFP"/> : null}
         {(url === "as4letras" && type === "ESTJ") ? <img style={{width: `${size}`}} src={avatarESTJ} alt="ESFP"/> : null}
         {(url === "as4letras" && type === "ESFJ") ? <img style={{width: `${size}`}} src={avatarESFJ} alt="ESFP"/> : null}
         {(url === "as4letras" && type === "ISTJ") ? <img style={{width: `${size}`}} src={avatarISTJ} alt="ESFP"/> : null}

@@ -6,10 +6,12 @@ p
   margin: 0px;
   padding: 0px;
   /* list-style: none; */
-  background: #f7f7f7;
+  background: #f6f7f0;
+  /* background: #eff0ea; */
   font-family: 'Darker Grotesque', sans-serif;
   text-decoration-line: none;
   scroll-behavior: smooth;
+  letter-spacing: 0.0225rem;
 }
 h1 { 
   padding: 0;

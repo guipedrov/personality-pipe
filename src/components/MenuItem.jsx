@@ -8,7 +8,7 @@ function MenuItem(props) {
     <>
       {props.direct === true && props.stick === false ? 
       <Link style={{ textDecoration: 'none', color: 'inherit'}} to={`/t/`+`${props.categoryMenu}/`+`${props.name}`}> 
-      <div style={{height: `${props.customH}`, minWidth: `${props.customW}`}} onClick={()=>{props.newType(props.name)}} className={`item ${props.name}`}>
+      <div style={{height: `${props.customH}`, minWidth: `${props.customW}`}} onClick={()=>{props.newType(props.name)}} className={`fn-item ${props.name}`}>
       <div className="titles">{props.name}</div>
       </div> </Link> 
       : <></>}

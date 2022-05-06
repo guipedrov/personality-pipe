@@ -10,12 +10,9 @@ import { CustomTheme } from "./CustomTheme";
 import arrowdown from "../assets/images/arrow-down.png"
 import arrowleft from "../assets/images/arrow-left.png"
 
-//MUI processo: instalação, importação dos mui components com métodos (e.g. ThemeProvider, createTheme, styled), importação dos mui components para renderização, aplicação dos mui components para renderização, customização do tema, envolver return
-
-function Title({ newType, all, hiddenMenu }) {
+function Title({ newType, all }) {
   const [titulo, setTitulo] = useState('Tipologia das "4 Letras"'); //Alterado pelo botão principal, mas só muda a exibição
-  const [topico, setTopico] = useState("") //Não é alterado pelo botão principal, é exibido no lugar do título da categoria
-  
+
   //MUI:
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -23,19 +20,16 @@ function Title({ newType, all, hiddenMenu }) {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-
   const handleClose = () => {
     setAnchorEl(null);
   };
 
   return (
     <TypeContext.Consumer>
-      {({ onHiddenMenu }) => (
+      {({ titleStyle, newTitle, label, newLabel }) => (
     <ThemeProvider theme={CustomTheme}>
       <div className="topico-container"></div>
       <div className="titulos-container">
-
-        {/* <img onClick={onHiddenMenu(true)} style={{display:"inline", width:"1em", paddingRight:"0.5em", marginRight: '0.5em', borderRight: '1px solid #cccccc'}} src={arrowleft} alt="^" /> */}
         <Button
           variant='grotesque'
           id="basic-button"
@@ -44,8 +38,10 @@ function Title({ newType, all, hiddenMenu }) {
           aria-expanded={open ? "true" : undefined}
           onClick={handleClick}
         >
-          <div style={{display: "inline"}}>{titulo}</div>
+          {/* <img style={{display:"inline", width:"0.6em", paddingTop:"0.8em", paddingLeft:"0.35em"}} src={arrowdown} alt="^" /> */}
+          <div className={`selected-title-${titleStyle}`} style={{display: "inline"}}>{label ? label : titulo}</div>
           <img style={{display:"inline", width:"0.6em", paddingTop:"0.8em", paddingLeft:"0.35em"}} src={arrowdown} alt="^" />
+          {titleStyle != "out" ? <div style={{display: 'block', height: '0.1rem', width: '100%', background: '#AFAFAF', paddingTop: '-1rem'}}></div> : null}
         </Button>
 
         <Menu
@@ -62,8 +58,10 @@ function Title({ newType, all, hiddenMenu }) {
           <MenuItem
             style={{color: '#141414', fontFamily: "'Darker Grotesque', sans-serif", fontWeight: '600', fontSize: '1.3rem', lineHeight: '1.3em', borderBottom: '1px solid #efefef'}}
             onClick={() => {
-              setTitulo('Tipologia das "4 Letras"');
+              setTitulo("Tipologia das \"4 Letras\"");
+              newLabel("1");
               newType(all);
+              newTitle("out")
               handleClose();
             }}
           >Tipologia das "4 Letras"</MenuItem>
@@ -74,7 +72,9 @@ function Title({ newType, all, hiddenMenu }) {
             style={{color: '#141414', fontFamily: "'Darker Grotesque', sans-serif", fontWeight: '600', fontSize: '1.3rem', lineHeight: '1.5em', borderBottom: '1px solid #efefef'}}
             onClick={() => {
               setTitulo("Tipologia Jungiana Tradicional");
+              newLabel("2");
               newType(all);
+              newTitle("out")
               handleClose();
             }}
           >Tipologia Jungiana Tradicional</MenuItem>
@@ -85,7 +85,9 @@ function Title({ newType, all, hiddenMenu }) {
             style={{color: '#141414', fontFamily: "'Darker Grotesque', sans-serif", fontWeight: '600', fontSize: '1.3rem', lineHeight: '1.3em',}}
             onClick={() => {
               setTitulo("As Funções Cognitivas");
+              newLabel("3");
               newType(all);
+              newTitle("out")
               handleClose();
             }}
           >As Funções Cognitivas</MenuItem>
@@ -93,6 +95,7 @@ function Title({ newType, all, hiddenMenu }) {
 
         </Menu>
       </div>
+      
     </ThemeProvider>
       )}
     </TypeContext.Consumer>

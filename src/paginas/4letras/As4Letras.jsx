@@ -49,7 +49,8 @@ import { fnAs7En as fnAs7En } from "../../components/LongTexts.tsx";
 import { fnAs8 as fnAs8 } from "../../components/LongTexts.tsx";
 import { fnAs8En as fnAs8En } from "../../components/LongTexts.tsx";
 
-function As4Letras({ type, numCode}) {
+function As4Letras({ type, numCode }) {
+  /*On behalf of Menu*/
   const [openA, setOpenA] = useState(false)
   const [openB, setOpenB] = useState(false)
   const anchorRefA = useRef(null)  /*Check*/
@@ -109,7 +110,9 @@ function As4Letras({ type, numCode}) {
     prevOpenB.current = openB;
   }, [openB])
 
+  /*Tipos e etc:*/
   const [the, setThe] = useState("Os") /*Provisório, pré-typescript*/
+  /*x*/
   const [colorSide, setColorSide] = useState("#888888")
   const [coupleTypeA, setCoupleTypeA] = useState(type)
   const [coupleTypeB, setCoupleTypeB] = useState(type)
@@ -132,27 +135,27 @@ function As4Letras({ type, numCode}) {
   const as4letras14 = as4letras[14].name;
   const as4letras15 = as4letras[15].name;
   const as4letras16 = as4letras[16].name;
+  let nt = "#454545"
+  let sj = "#454545"
+  let sp = "#454545"
+  let nf = "#454545"
 
   useEffect(() => {
     if (numCode === 9 || 10 || 11 || 12) { 
-      setColorSide("#343434")
+      setColorSide(sp)
     } else if (numCode === 13 || 14 || 15 || 16) {
-      setColorSide("#232212")
+      setColorSide(nf)
     } else if (numCode === 1 || 2 || 3 || 4) {
-      setColorSide("#232666")
+      setColorSide(nt)
     } else if (numCode === 5 || 6 || 7 || 8) {
-      setColorSide("#111222")
+      setColorSide(sj)
     }
   }, [])
-  let nt = "#454545"
-  let st = "#454545"
-  let sf = "#454545"
-  let nf = "#454545"
 
   console.log(numCode)
   console.log(type,"aqui")
 
-  /*type: a personalidade | numCode: a personalidade em numero | chosenfns: a lista literal de funções | index: essa lista em numeros */
+  /*type: a personalidade | numCode: a personalidade em forma de numero | chosenfns: a lista literal de funções | index: essa lista em numeros */
   
   return (
     <TypeContext.Consumer>
@@ -567,10 +570,9 @@ function As4Letras({ type, numCode}) {
               </div>
             </div>
             <div className="ad-horizontal">AD</div>
-            <Rodape />
-            {console.log(chosenfns)}
-            {console.log(index)}
           </div>
+          {console.log("NAS 4 LETRAS",chosenfns)}
+          {console.log("NAS 4 LETRAS",index)}
         </div>
       )}
     </TypeContext.Consumer>
