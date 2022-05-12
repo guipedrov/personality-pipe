@@ -85,7 +85,7 @@ function Fn({ type, numCode, newTitle, newLabel, onMajor }) {
 
             <RelatedTypes type={type} />
 
-            <div id="natureza" className="fn-container"> {/*container*/}
+            <div id="natureza" style={{paddingTop: '1rem'}} className="fn-container"> {/*container*/}
               <h1>Natureza</h1>
               <div> {/*box*/}
                 <div className="box-texto">
@@ -100,14 +100,22 @@ function Fn({ type, numCode, newTitle, newLabel, onMajor }) {
                 <h1>Definições</h1>
                 <div> {/*box*/}
                   <div>
+
                     <div className="fn-definicao-titulo">
                       {fnDefinitionsAuthors[0].def1}:
                     </div>
-                    <div className="a4l-texto-body">{fnDefinitions[numCode].def1}</div> {/*reaproveitada*/}
-                    <div className="fn-definicao-titulo" style={{padding: '0px 0px 0px 0px'}}>
+                    <div className="a4l-texto-body" style={{marginBottom: '0.5rem'}}>{fnDefinitions[numCode].def1}</div> {/*reaproveitada*/}
+
+                    <div className="fn-definicao-titulo" style={{padding: '0px 0px 12px 0px'}}>
                       {fnDefinitionsAuthors[0].def2}:
                     </div>
-                    <div className="a4l-texto-body" style={{marginBottom: '0px'}}>{fnDefinitions[numCode].def2}</div> {/*reaproveitada*/}
+                    <div className="a4l-texto-body" style={{marginBottom: '0.5rem'}}>{fnDefinitions[numCode].def2}</div> {/*reaproveitada*/}
+
+                    <div className="fn-definicao-titulo" style={{padding: '0px 0px 12px 0px'}}>
+                      {fnDefinitionsAuthors[0].def4}:
+                    </div>
+                    <div className="a4l-texto-body" style={{marginBottom: '0.5rem'}}>{fnDefinitions[numCode].def4}</div> {/*reaproveitada*/}
+                  
                   </div>
                 </div>
               </div>

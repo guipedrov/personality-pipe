@@ -21,11 +21,6 @@ function RelatedTypes({categoryMenu, type}) {
 
   const typesAlonePaired = typesAlone.map(value =>  ({name: value}) )
 
-  console.log(tuplaType)
-  console.log(typesAlone)
-  console.log(typesAlonePaired)
-
-
     return (
         <div className="related-types" style={{margin: '0 auto', maxWidth: '880px'}}>
             <div className="menu-roll-container related" style={{margin: '0 auto', display: 'flex', alignItems: 'center'}}>

@@ -135,22 +135,61 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
   const as4letras14 = as4letras[14].name;
   const as4letras15 = as4letras[15].name;
   const as4letras16 = as4letras[16].name;
-  let nt = "#E25866"
-  let sj = "#28BEF0"
-  let sp = "#F7D724"
-  let nf = "#39DF5A"
 
   useEffect(() => {
-    if (numCode === 9 || 10 || 11 || 12) { 
-      setColorSide(sp)
-    } else if (numCode === 13 || 14 || 15 || 16) {
-      setColorSide(nf)
-    } else if (numCode === 1 || 2 || 3 || 4) {
-      setColorSide(nt)
-    } else if (numCode === 5 || 6 || 7 || 8) {
-      setColorSide(sj)
-    }
-  }, [])
+    switch (numCode) {
+      case 1:
+        setColorSide("#E25866")
+      break
+      case 2:
+        setColorSide("#E25866")
+      break
+      case 3:
+        setColorSide("#E25866")
+      break
+      case 4:
+        setColorSide("#E25866")
+      break
+      case 5:
+        setColorSide("#28BEF0")
+      break
+      case 6:
+        setColorSide("#28BEF0")
+      break
+      case 7:
+        setColorSide("#28BEF0")
+      break
+      case 8:
+        setColorSide("#28BEF0")
+      break
+      case 9:
+        setColorSide("#F7D724")
+      break
+      case 10:
+        setColorSide("#F7D724")
+      break
+      case 11:
+        setColorSide("#F7D724")
+      break
+      case 12:
+        setColorSide("#F7D724")
+      break
+      case 13:
+        setColorSide("#36E258")
+      break
+      case 14:
+        setColorSide("#36E258")
+      break
+      case 15:
+        setColorSide("#36E258")
+      break
+      case 16:
+        setColorSide("#36E258")
+      break
+      default:
+        setColorSide("#000")
+      break }
+    }, [])
   
   useEffect(() => {
     onMajor(true)
@@ -170,7 +209,7 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                 <div className="mobile-vc-2">
                   <Avatar url="as4letras" type={type} size="23rem" />
                   <div>{type}</div>
-                  <div>{as4letras[numCode].catch}</div> {/*Frase de efeito*/}
+                  <div>–{as4letras[numCode].catch}</div> {/*Frase de efeito*/}
                 </div>
                 <div className="mobile-vc-3">
                   <div className="mobile-vc-3-indice"><a style={{ textDecoration: "none", color: "inherit" }} href="#a4i1">1. Traços</a></div>
@@ -182,14 +221,17 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                 </div>
             </div>
           </div>
+
+          {/*texto abrivel acima de cada papel: OK*/}
+          {/*warning logo abaixo do stack: OK*/}
           
           <div className="as4letras-desktop">
             <div className="as4letras-desktop-visitcard">
               <div className="desktop-vc-1"></div>
               <div className="desktop-vc-2">
-                <Avatar url="as4letras" type={type} size="21rem" />
+                <Avatar url="as4letras" type={type} size="22rem" />
                 <div>{type}</div>
-                <div>{as4letras[numCode].catch}</div> {/*Frase de efeito*/}
+                <div>–{as4letras[numCode].catch}</div> {/*Frase de efeito*/}
               </div>
               <div className="desktop-vc-3">
                 <div className="desktop-vc-3-indice"><a style={{ textDecoration: "none", color: "inherit" }} href="#a4i1">1. Traços</a></div> {/*OK*/}
@@ -208,7 +250,7 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                     <div style={{ fontSize: "1.5em", display: "inline" }}>
                       ‟{the} {type}s{" "}
                     </div>
-                    {as4letras[numCode].desc}“ <div>xx</div> {/*Descrição*/}
+                    {as4letras[numCode].desc}“ <div style={{paddingTop: '0.8rem'}}>{as4letras[numCode].author}</div> {/*Descrição*/}
                   </div>
                   <Warnings typo="as4letras" about="summary" size="770px" />
                 </div>
@@ -237,13 +279,13 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                       <div className="a4l-texto-body">
                         {as4LetrasTraits[numCode].traittext1}
                       </div>
-                      <div className="a4l-texto-start">
+                      <div className="a4l-texto-start-out">
                         {as4LetrasTraits[numCode].trait2}
                       </div>
                       <div className="a4l-texto-body">
                         {as4LetrasTraits[numCode].traittext2}
                       </div>
-                      <div className="a4l-texto-start">
+                      <div className="a4l-texto-start-out">
                         {as4LetrasTraits[numCode].trait3}
                       </div>
                       <div className="a4l-texto-body last-body">
@@ -262,18 +304,10 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                     <div className="a4l-texto-start">
                       {as4LetrasStory[numCode].phase1}
                     </div>
-                    <div className="a4l-texto-body">
-                      {as4LetrasStory[numCode].phasetext1}
-                    </div>
-                    <div className="a4l-texto-start">
-                      {as4LetrasStory[numCode].phase1}
-                    </div>
+
                     <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center', fontStyle: 'italic', color: '#9a9a9a', fontSize: '2rem', padding: '0px 0px 0.4rem 0px', borderRadius: '17px', border: '1px solid #aaaaaa', margin: '0 auto', width: '10rem', marginTop: '3.2rem', marginBottom: '2.4rem'}}><div>Em breve</div></div>
-                    <div className="a4l-texto-body">
-                      {as4LetrasStory[numCode].phasetext1}
-                    </div>
+
                     <div className="a4l-texto-start">
-                      {as4LetrasStory[numCode].phase1}
                     </div>
                     <div className="a4l-texto-body last-body">
                       {as4LetrasStory[numCode].phasetext1}
@@ -396,29 +430,18 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
               <div id="a4i4" className="as4letras-textos-identity">
                 <h1>Identidade e diferenciação</h1>
                 <div>
-                  <div style={{ marginTop: "0.6em", marginBottom: "3.1em" }}>
+                  <div style={{ marginTop: "0.6em", marginBottom: "2rem" }}>
                     <div style={{ display: "flex", justifyContent: "center" }}>
                       <Badges url="as4l" numCode={numCode} role="x1" size="9" />
                     </div>
                     <div>
-                      <div className="a4l-texto-start">
-                        {/* {as4LetrasIdentity[numCode].pair} */}
-                      </div>
-                      <div className="a4l-texto-body">
-                        {/* {as4LetrasIdentity[numCode].pairdesc} */}
-                      </div>
-                    </div>
-                  </div>
-                  <div style={{ marginBottom: "0em" }}>
-                    <div style={{ display: "flex", justifyContent: "center" }}>
-                      <Badges url="as4l" numCode={numCode} role="x1" size="9" />
-                    </div>
-                    <div>
-                      <div className="a4l-texto-start">
-                        {/* {as4LetrasIdentity[numCode].pair} */}
-                      </div>
-                      <div className="a4l-texto-body last-body">
-                        {/* {as4LetrasIdentity[numCode].pairdesc} */}
+                      <div>
+                        <div className="a4l-texto-body">
+                          {as4LetrasIdentity[0].title}<b>{fn[index2[0]].name}</b>{" "}{as4LetrasIdentity[0].text}
+                        </div>
+                        <div style={{marginBottom: '0'}} className="a4l-texto-body">
+                          {as4LetrasIdentity[index2[0]].text}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -429,22 +452,34 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                 <h1>Desenvolvimento Pessoal</h1>
                 <div>
                   <div>
-                    <div>
-                      <div className="a4l-texto-start start-3">
-                        Torne-se mais consciente da sua função {fn[index2[0]].name}{` (`}{fn[index2[0]].desc}{`)`}
+
+                      <div className="a4l-texto-body">
+                        {as4LetrasDevelopment[0].zero}
+                        <br/><br/>
                       </div>
                       <div className="a4l-texto-body">
-                        {fnAsPrincipal[index2[0]].as1}
+                        1) {as4LetrasDevelopment[0].first}
+                        <br/><br/>
+                        <b>{as4LetrasDevelopment[numCode].firsttext}</b>
                       </div>
-                    </div>
-                    <div>
-                      <div className="a4l-texto-start start-3">
-                        Fique atento para <em>loops</em> {`“`}{fn[index2[0]].name}{`-`}{fn[index2[2]].name}{`”`}
+                      <div className="a4l-texto-body">
+                        2) {as4LetrasDevelopment[0].second}
+                        <br/><br/>
+                        <b>{as4LetrasDevelopment[numCode].secondtext}</b>
                       </div>
-                      <div className="a4l-texto-body last-body">
-                        {fnAsPrincipal[index2[0]].as1}
+                      <div className="a4l-texto-body">
+                        3) {as4LetrasDevelopment[0].third}
+                        <br/><br/>
+                        <b>{as4LetrasDevelopment[numCode].thirdtext}</b>
                       </div>
-                    </div>
+                      <div className="a4l-texto-body">
+                        4) {as4LetrasDevelopment[0].fourth}
+                        <br/><br/>
+                        <b>{as4LetrasDevelopment[numCode].fourthtext}</b>
+                        <br/><br/>
+                        Você pode ler mais sobre o desenvolvimento das suas funções <a style={{color: 'inherit'}} href="https://mbti-notes.tumblr.com/theory">aqui</a> (em inglês).
+                      </div>
+
                   </div>
                 </div>
               </div>
@@ -488,7 +523,7 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                                   aria-labelledby="composition-button"
                                   onKeyDown={handleListKeyDownA}
                                 >
-                                  <MenuItem variant='clean' onClick={() => {handleCloseA(); setCoupleTypeA(as4letras1); handleCloseAll(); setColorA(nt)}}>{as4letras[1].name}</MenuItem>
+                                  <MenuItem variant='clean' onClick={() => {handleCloseA(); setCoupleTypeA(as4letras1); handleCloseAll(); setColorA("#fff")}}>{as4letras[1].name}</MenuItem>
                                   <MenuItem onClick={() => {handleCloseA(); setCoupleTypeA(as4letras2); handleCloseAll()}}>{as4letras[2].name}</MenuItem>
                                   <MenuItem onClick={() => {handleCloseA(); setCoupleTypeA(as4letras3); handleCloseAll()}}>{as4letras[3].name}</MenuItem>
                                   <MenuItem onClick={() => {handleCloseA(); setCoupleTypeA(as4letras4); handleCloseAll()}}>{as4letras[4].name}</MenuItem>
@@ -503,7 +538,7 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                                   <MenuItem onClick={() => {handleCloseA(); setCoupleTypeA(as4letras13); handleCloseAll()}}>{as4letras[13].name}</MenuItem>
                                   <MenuItem onClick={() => {handleCloseA(); setCoupleTypeA(as4letras14); handleCloseAll()}}>{as4letras[14].name}</MenuItem>
                                   <MenuItem onClick={() => {handleCloseA(); setCoupleTypeA(as4letras15); handleCloseAll()}}>{as4letras[15].name}</MenuItem>
-                                  <MenuItem onClick={() => {handleCloseA(); setCoupleTypeA(as4letras16); handleCloseAll(); setColorA(nf)}}>{as4letras[16].name}</MenuItem>
+                                  <MenuItem onClick={() => {handleCloseA(); setCoupleTypeA(as4letras16); handleCloseAll(); setColorA("#fff")}}>{as4letras[16].name}</MenuItem>
                                 </MenuList>
                               </ClickAwayListener>
                             </Paper>
@@ -511,6 +546,7 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                         )}
                       </Popper>
                     </div>
+
                     <div className="a4-texto-couples-2">
                       <FavoriteBorderIcon style={{width: "2rem" }} sx={{ color: grey[400] }}/>
                     </div>
@@ -574,12 +610,14 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                           )}
                         </Popper>
                     </div>
+
                   </div>
                   <div className="a4l-texto-body last-body">
                     <Couples coupleTypeA={coupleTypeA} coupleTypeB={coupleTypeB} />
                   </div>
                 </div>
               </div>
+
             </div>
             <div className="ad-horizontal">AD</div>
           </div>

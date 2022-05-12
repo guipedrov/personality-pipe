@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Jung.css'
+import { Link } from "react-router-dom";
 
 import BackMenu from "../../components/BackMenu";
 import Avatar from "../../components/Avatar";
@@ -77,17 +78,17 @@ function Jung({ type, numCode, newTitle, newLabel, onMajor }) {
                     <div style={{ fontSize: "1.3em", display: "inline" }}>‟<em>{jungQuote[numCode].quote}“</em></div> 
                     <div style={{ fontSize: "0.9em"}}>C.G. Jung</div>
                   </div>
-                  <Warnings typo="as4letras" about="summary" size="770px" />
                 </div>
               </div>
 
-              <div id="sintese" style={{marginBottom: '1.3rem'}}>
+              <div id="sintese" style={{paddingTop: '1rem', marginBottom: '1.3rem'}}>
                 <h1>Síntese</h1>
                 <div>
                   <div className="a4l-texto-body">
                     <div className="avatar-jungian-type"><Badges url="jung" numCode="100" role={type}/></div>{jungSyntax[numCode].summary}
                   </div>
-                </div>    
+                </div>  
+                <Warnings style={{margin: '0 auto'}} typo="as4letras" about="summary" size="100%" />  
               </div>
 
               <div id="papel" className="as4letras-textos-roles" style={{marginBottom: '1.3rem'}}>
@@ -115,6 +116,8 @@ function Jung({ type, numCode, newTitle, newLabel, onMajor }) {
                 <div>
                   <div className="a4l-texto-body">
                     <div className="foto-jung"><Badges url="photo" role="jung" size="7rem"/><div style={{lineHeight: '1rem', fontWeight: '500', color: '#888888', fontSize: '1rem'}}>texto de </div><div style={{lineHeight: '1rem', fontWeight: '600', color: '#888888', fontSize: '1.2rem'}}>C. G. Jung</div></div>{jungByJung[numCode].text}
+                    <br/><br/>
+                    <div>Leia também sobre a função <Link style={{textDecoration: 'none', color: 'inherit'}} to={`/t/fn/${type}`}><em>{fn[numCode].desc}</em></Link></div>
                   </div>
                 </div>
               </div>

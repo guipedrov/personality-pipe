@@ -15,7 +15,6 @@ function HiddenMenu({ hiddenMenu, onHiddenMenu, onMenuState }) {
     document.addEventListener("mousedown", (event) => {
       if (!menu.current.contains(event.target)) {
         onMenuState(false)
-        console.log("ararara")
       }
     })
   })

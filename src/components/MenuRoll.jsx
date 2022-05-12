@@ -16,7 +16,6 @@ function MenuRoll({ categoryMenu, type, newType, customH, customW, chosen, direc
   const listagemSemTodos = listagem.filter((duckTape) => {
     return duckTape.name != ("Todos" || "All")
   })
-  console.log(listagemSemTodos)
 
   function onAll() {
     if (categoryMenu === "as4letrasEnglish") {

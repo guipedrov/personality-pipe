@@ -29,14 +29,11 @@ function HomeFnAll({ categoryMenu, type, onMajor, newTitle, newLabel, newType })
       <div className="subtitle-container-onall">
             <div className="sub-window-onall">
               <img style={{margin: '0 auto', width: '6rem', padding: '0.7rem 0 0.7rem 0'}} src={eightFunctions} alt="4 letras"/>
-              <div>Tipos psicológicos na psicologia de Carl Gustav Jung referem-se à identificação e à descrição de um certo número de processos psicológicos básicos. Jung mostrou de que maneira esses processos se ligam em várias combinações para determinar o caráter de um indivíduo. Cada combinação particular atende por um "Tipo Psicológico Jungiano".
+              <div>As Funções Cognitivas Jungianas, também chamadas de Funções Psicológicas são processos mentais utilizados por todas as pessoas no seu dia-a-dia para interagir com o ambiente, com as coisas, com os outros e consigo mesmo. Essas funções podem ser usadas em diferentes combinações e com diferentes ordens de importância para cada um, dependendo da natureza e da predisposição de sua psiquê. A partir dessa premisa, temos a base para a teoria dos Tipos Psicológicos elaborada por Carl Jung, no livro Os Tipos Psicológicos de 1921.
               {description ? null : <div className="description-expand" style={{paddingTop: '1.3rem', textAlign: 'center', color: '#d9d9d9', border: '2 px #d9d9d9', borderRadius: '50%'}} onClick={()=> setDescription(!description)}><ArrowDropDownIcon/></div>}
               {description ? <div className="sub-window-onall-down">
               <br/>
-              Jung inicialmente definiu duas atitudes de personalidade (introversão e a extroversão) e somente mais tarde conceituou as funções psíquicas (pensamento, sentimento, sensação e intuição) e as funções (principal, auxiliar e inferior). As atitudes de personalidade, extroversão e introversão, são as formas psicológicas de adaptação do indivíduo ao mundo, quer seja exterior ou interior.
-              <br/><br/>
-              Como resultado, Jung apontou 8 tipos psicológicos: Sentimental Extrovertido, Sentimental Introvertido, Pensador Extrovertido, Pensador Introvertido, Sensor Extrovertido, Sensor Introvertido, Intuitivo Extrovertido e Intuitivo Introvertido. Eles também são grafados, altenativamente, como: Tipo Fe, Tipo Fi, Tipo Te, Tipo Ti, Tipo Tipo Se, Tipo Si, Tipo Ne e Tipo Ni.
-
+              Para Jung, os processos da nossa mente se esgotam em: Pensamento – Sensação – Intuição – Sentimento. Adicionalmente, levando em consideração a qualidade da Extroversão (anteriormente difundida), Jung teorizou que cada um desses 4 processos cognitivos seria afetado pela presença ou ausência dessa qualidade, gerando portanto duas funções distintas em sua manifestação, por exemplo: "Pensamento Extrovertido" e "Pensamento Introvertido", respectivamente "Te" e "Ti".
               <br/><br/>
               <div style={{color: '#999999', fontWeight: '500'}}>Saiba mais a respeito na sessão "Teoria" (em breve)</div>
               <div className="description-expand" style={{paddingTop: '1rem', textAlign: 'center', color: '#d9d9d9'}} onClick={()=> setDescription(!description)}><ArrowDropUpIcon/></div>

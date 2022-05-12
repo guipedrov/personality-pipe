@@ -10,7 +10,7 @@ function Couples({ coupleTypeA, coupleTypeB }) {
         <div className="text-title" style={{fontWeight: '700', fontSize: '1.5em'}}>{`${coupleTypeA}`+` + `+`${coupleTypeB}`}</div>
         <div className="text-body" style={{fontSize: '1.2em'}}>
             {/*ESFP:*/}
-            {(coupleTypeA === "ESFP" && coupleTypeB === "ENTP") ? <div>{couplesCombination[10].esfpWentp}</div> : "em breve."}
+            {(coupleTypeA === "ESFP" && coupleTypeB === "ENTP") ? <div>{couplesCombination[10].esfpWentp}</div> : <em>em breve</em>}
 
 
 

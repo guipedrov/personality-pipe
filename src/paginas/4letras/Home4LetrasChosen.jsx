@@ -49,12 +49,6 @@ function Home4LetrasChosen({categoryMenu, onMajor, type, newTitle, newType, newL
   const originalfunctionsindex = Object.fromEntries(originalfunctions.map((k, i) => [k, i]))  //cria um objeto com os valores das fn na ordem certa
   const as4letraschosenfunctionsindex = as4letraschosenfunctionsvalues.map(k => originalfunctionsindex[k]); //cria um novo array com valores que representam indices do
   
-  console.log("####Chosen", as4letraschosenfunctionsvalues)
-  console.log("####Chosen", originalfunctions)
-  console.log("####Chosen", originalfunctionsindex)
-  console.log("####Chosen", as4letraschosenfunctionsindex)
-
-
   if (type === "Todos") {
     return <Navigate to="/t/as4letras"/>
   }

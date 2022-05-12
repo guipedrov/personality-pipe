@@ -152,9 +152,6 @@ function As4Letras({ type, numCode }) {
     }
   }, [])
 
-  console.log(numCode)
-  console.log(type,"aqui")
-
   /*type: a personalidade | numCode: a personalidade em forma de numero | chosenfns: a lista literal de funções | index: essa lista em numeros */
   
   return (
@@ -571,8 +568,6 @@ function As4Letras({ type, numCode }) {
             </div>
             <div className="ad-horizontal">AD</div>
           </div>
-          {console.log("NAS 4 LETRAS",chosenfns)}
-          {console.log("NAS 4 LETRAS",index)}
         </div>
       )}
     </TypeContext.Consumer>
