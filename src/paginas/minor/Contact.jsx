@@ -5,7 +5,11 @@ import Rodape from "../../components/Rodape";
 import lanterns from "../../assets/images/bg/lanterns.png";
 import logo from "../../assets/images/pp-figure-2.png";
 
-function Contact() {
+function Contact({onMajor}) {
+
+  useEffect(() => {
+    onMajor(false)
+  }, [])
 
   return (
     <div className="minor-wrapper">

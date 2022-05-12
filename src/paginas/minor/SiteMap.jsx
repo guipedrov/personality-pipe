@@ -14,7 +14,11 @@ import maptypo from "../../assets/images/map-typo.png";
 import { Link } from "react-router-dom";
 
 
-function SiteMap() {
+function SiteMap({onMajor}) {
+
+  useEffect(() => {
+    onMajor(false)
+  }, [])
     
   return (
     <div className="minor-wrapper">

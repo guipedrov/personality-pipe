@@ -212,7 +212,7 @@ function Badges({ url, index, numCode, role, size, display }) {
         {(url === "jung" && numCode === "100" && role === "Ni") ? <img src={typeNi} alt="~"/> : null}
         {(url === "photo" && role === "jung") ? <img style={{width: `${size}`}} src={photoJung} alt="ESFP"/> : null}
         {/*???*/}
-        {(url === "as4l" && index === "1" && role === "x1") ? <img style={{width: `${size}`}} src={FeAs1} alt="ESFP"/> : null}
+        {/* {(url === "as4l" && index === "1" && role === "x1") ? <img style={{width: `${size}`}} src={FeAs1} alt="ESFP"/> : null} */}
         {/*64+1 para "fn"*/}
         {(url === "as4l" && index === "1" && role === "x1") ? <img style={{width: `${size}`}} src={FeAs1} alt="ESFP"/> : null}
         {(url === "as4l" && index === "1" && role === "x2") ? <img style={{width: `${size}`}} src={FeAs2} alt="ESFP"/> : null}

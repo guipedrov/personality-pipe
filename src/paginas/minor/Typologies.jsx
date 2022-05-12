@@ -10,7 +10,11 @@ import enneagram from "../../assets/images/enneagram.fw.png";
 import temperaments from "../../assets/images/temperaments.fw.png";
 import { Link } from "react-router-dom";
 
-function Typologies() {
+function Typologies({onMajor}) {
+
+  useEffect(() => {
+    onMajor(false)
+  }, [])
 
   return (
     <div className="minor-wrapper">

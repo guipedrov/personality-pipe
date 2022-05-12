@@ -11,7 +11,11 @@ import hm from "../../assets/images/hm.png";
 import idr from "../../assets/images/idr.png";
 import { HMobiledataSharp } from "@mui/icons-material";
 
-function Tests() {
+function Tests({onMajor}) {
+
+  useEffect(() => {
+    onMajor(false)
+  }, [])
 
   return (
     <div className="minor-wrapper">
@@ -55,22 +59,22 @@ function Tests() {
             <div style={{color: '#FF7043', fontWeight: '600', paddingTop: '0.6rem', fontSize: '1.2em'}}><a style={{textDecoration: 'none', color: 'inherit'}} href="https://jung.test.typologycentral.com/">Acessar</a></div>
           </div>
           <div>
-            <div style={{paddingTop: '1em'}}><img style={{height: '4em'}} src={the16} alt="" /></div>
+            <div style={{paddingTop: '0.5em'}}><img style={{height: '4em'}} src={the16} alt="" /></div>
             <div style={{fontSize: '1.4em', fontWeight: '600'}}>16 Personalities</div>
             <div style={{fontStyle: 'italic', color: '#454545', padding: '0 0.2rem 0 0.2rem'}}>Teste de personalidade "4 letras". O mais popular da internet, agrega serviços pagos. Útil para aqueles que procuram um primeiro contato com a tipologia Myers-Briggs e não tem qualquer resultado anterior.</div>
-            <div style={{color: '#FF7043', fontWeight: '600', paddingTop: '0.6rem', fontSize: '1.2em'}}><a style={{textDecoration: 'none', color: 'inherit'}} href="https://www.16personalities.com/br/teste-de-personalidade">Acessar</a></div>                    
+            <div style={{color: '#FF7043', fontWeight: '600', paddingTop: '0.6rem', paddingBottom: '0.5rem', fontSize: '1.2em'}}><a style={{textDecoration: 'none', color: 'inherit'}} href="https://www.16personalities.com/br/teste-de-personalidade">Acessar</a></div>                    
           </div>
           <div>
-            <div style={{paddingTop: '1em'}}><img style={{height: '4em'}} src={hm} alt="" /></div>
+            <div style={{paddingTop: '0.5em'}}><img style={{height: '4em'}} src={hm} alt="" /></div>
             <div style={{fontSize: '1.4em', fontWeight: '600'}}>HumanMetrics</div>
-            <div style={{fontStyle: 'italic', color: '#454545'}}>"Teste de personalidade "4 letras". Teste de tamanho "médio", pontual, detalhado e menos genérico do que outros semelhantes.</div>
-            <div style={{color: '#FF7043', fontWeight: '600',  paddingTop: '0.6rem',  fontSize: '1.2em'}}><a style={{textDecoration: 'none', color: 'inherit'}} href="https://www.humanmetrics.com/personality">Acessar</a></div>
+            <div style={{fontStyle: 'italic', color: '#454545'}}>Teste de personalidade "4 letras". Teste de tamanho "médio", pontual, detalhado e menos genérico do que outros semelhantes.</div>
+            <div style={{color: '#FF7043', fontWeight: '600',  paddingTop: '0.6rem', paddingBottom: '0.5rem',  fontSize: '1.2em'}}><a style={{textDecoration: 'none', color: 'inherit'}} href="https://www.humanmetrics.com/personality">Acessar</a></div>
           </div>
           <div>
             <div style={{paddingTop: '1em'}}><img style={{height: '4em'}} src={idr} alt="" /></div>
             <div style={{fontSize: '1.4em', fontWeight: '600'}}>IDRlabs</div>
-            <div style={{fontStyle: 'italic', color: '#454545', padding: '0 0.2rem 0 0.2rem'}}>Teste de personalidade "4 letras". Vamos dizer que você esteja em dúvida quanto a outros resultados e prefira uma prova real ou mesmo um primeiro teste baseado em dicotomias, então o teste do IDR Labs será a melhor opção.</div>
-            <div style={{color: '#FF7043', fontWeight: '600', paddingTop: '0.6rem',  fontSize: '1.2em'}}><a style={{textDecoration: 'none', color: 'inherit'}} href="https://www.idrlabs.com/pt/teste.php">Acessar</a></div>
+            <div style={{fontStyle: 'italic', color: '#454545', padding: '0 0.2rem 0 0.2rem'}}>Teste de personalidade "4 letras". Digamos que você esteja em dúvida quanto a um resultado e queira uma prova real ou mesmo um primeiro baseado em dicotomias. Esse será uma boa opção.</div>
+            <div style={{color: '#FF7043', fontWeight: '600', paddingTop: '0.6rem', paddingBottom: '0.5rem',  fontSize: '1.2em'}}><a style={{textDecoration: 'none', color: 'inherit'}} href="https://www.idrlabs.com/pt/teste.php">Acessar</a></div>
           </div>
         </div>
       </div>

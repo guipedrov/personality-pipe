@@ -15,7 +15,7 @@ function About({onMajor}) {
     <div className="minor-wrapper">
       <Headings
         title={"Sobre"}
-        description={"Personality Pipe: Seu portal de informações sobre personalidades"}
+        description={<em>Um portal de informações sobre personalidades</em>}
         height={"20em"}
         imagebg={lanterns}
         colorbg=""

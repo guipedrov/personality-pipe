@@ -16,6 +16,7 @@ export const genericComments = [
   stackWarning: "As duas primeiras funções cognitívas são as mais frequente e intensamente adotadas pelo detentor da personalidade, enquanto a quarta função indica aquela menos forte e mais difícil de se empregar plenamente. Veja mais na sessão \"'Papéis' na personalidade\"",
   comboWarning: "Ao ler uma característica descrita, não diga \"ah, mas todo mundo faz isso\". Certamente todos apresentam certas atitudes ora ou outra, mas a frequencia o conforto e a intensidade com que praticam certas ações em detrimento de outras é o que determina sua personalidade. Alguem também poderia dizer, \"ah, mas ",
   jungWarning: "",
+  bellowWarning: "As funções cognitivas abaixo não representam um \"ranking\" de força/intensidade/frequência das funções na psiquê do indivíduo. Na verdade, elas podem aparecer (e aparecem) no seu comportamento e mentalidade como quaisquer outras funções. No entanto, por estarem fora do \"stack\", ou seja, fora do eixo principal de funções (Dominante/Auxiliar/Terciária/Inferior) elas não fazem parte da <b>identidade</b> dessa pessoa, não integram o modo particular de pensar e agir daquela pessoa. Extrapolando a teoria original das 4 letras, novos apontamentos passaram a relacionar essas funções \"restantes\" com outros <em>papéis</em> presentes na nossa psiquê, sem que isso signifique que tais elas se esgotem nesses papéis.",
   }
 ]
 
@@ -23,14 +24,22 @@ export const genericCommentsEnglish = []
 
 export const fnx = [
     {name: "Todos", desc: "Visão geral das Funções Cognitivas", brief: "", long: ""}, 
-    {name: "Fe", desc: "Sentimento Extrovertido", brief: "O Sentimento Extrovertido (Fe) é...", long: ""}, 
+    
+    {name: "Fe", desc: "Sentimento Extrovertido", brief: "O Sentimento Extrovertido (Fe) busca harmonia com e entre as pessoas no mundo exterior. Valores interpessoais e culturais são importantes.", long: ""}, 
+    
     {name: "Fi", desc: "Sentimento Introvertido", brief: "O Sentimento Introvertido (Fi) busca a harmonia de ações e pensamentos baseando-se em valores pessoais. Nem sempre articula esses valores, mas busca entender e redimir o outro e o ambiente externo.", long: ""},
+    
     {name: "Te", desc: "Pensamento Extrovertido", brief: "O Pensamento Extrovertido (Te) busca lógica e consistência no mundo à sua volta. Se tange em leis e regras externas. Cria estruturas e reproduz \"razões\" preferencialmente mensuráveis e evidenciáveis.", long: ""},
-    {name: "Ti", desc: "Pensamento Introvertido", brief: "O Pensamento Introvertido (Ti) é...", long: ""},
+    
+    {name: "Ti", desc: "Pensamento Introvertido", brief: "O Pensamento Introvertido (Ti) busca consistência interna e lógica das ideias. Confia na própria estrutura interior, que pode ser difícil de explicar aos outros se muito intrincada.", long: ""},
+    
     {name: "Se", desc: "Sensação Extrovertida", brief: "A Sensação Extrovertida (Se) vivencia plenamente e age sobre os dados concretos do aqui e agora. Confia no presente e se move quase sempre com ações tangíveis e relevantes para o contexto atual.", long: ""},
+    
     {name: "Si", desc: "Sensação Introvertido", brief: "A Sensação Introvertida (Si) compara e/ou integra fatos e experênicas presentes com as suas experiências passadas consideradas importantes. Armazena dados e informações sensoriais (sensíveis) para uso futuro.", long: ""},
-    {name: "Ne", desc: "Intuição Extrovertida", brief: "A Intuição Extrovertida (Ne) é...", long: ""},
-    {name: "Ni", desc: "Intuição Introvertida", brief: "A Intuição Introvertida (Ni) examina a consistência de idéias ou pensamentos através de um arcabouço interno. Confia em 'fashes' vindos do inconsciente, por vezes difíceis de serem entendidos por outros se muito abstratos.", long: ""}
+    
+    {name: "Ne", desc: "Intuição Extrovertida", brief: "A Intuição Extrovertida (Ne) vê possibilidades no mundo externo. Confia em 'flashes' do inconsciente, que podem então ser compartilhadas com outros.", long: ""},
+
+    {name: "Ni", desc: "Intuição Introvertida", brief: "A Intuição Introvertida (Ni) examina a consistência de idéias ou pensamentos através de um arcabouço interno. Confia em 'flashes' vindos do inconsciente, por vezes difíceis de serem entendidos por outros se muito abstratos.", long: ""}
 ]
 
 export const fnEnglish = []

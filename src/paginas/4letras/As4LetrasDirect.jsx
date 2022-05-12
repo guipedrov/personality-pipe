@@ -249,7 +249,7 @@ function As4Letras({ type, numCode, onMajor, newTitle, newLabel, chosenfns2, ind
                       <div className="a4l-texto-body last-body">
                         {as4LetrasTraits[numCode].traittext3}
                       </div>
-                      <div>Fonte: Personality Junkie</div>
+                      <div style={{padding: '5px 0 10px 0'}}>Fonte: Personality Junkie</div>
                     </div>
                   </div>
                 </div>

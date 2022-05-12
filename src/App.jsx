@@ -136,9 +136,9 @@ function App() {
         <Route path="/sitemap" element={<SiteMap onMajor={onMajor} />} />
         {/*x*/}
         {/*4 Letras:*/}
-        <Route path="/t" element={<Typologies onHiddenMenu={onHiddenMenu} />} />
-        <Route path="/typologies" element={<Typologies onHiddenMenu={onHiddenMenu} />} />
-        <Route path="/tipologias" element={<Typologies onHiddenMenu={onHiddenMenu} />} />
+        <Route path="/t" element={<Typologies onHiddenMenu={onHiddenMenu} onMajor={onMajor} />} />
+        <Route path="/typologies" element={<Typologies onHiddenMenu={onHiddenMenu} onMajor={onMajor} />} />
+        <Route path="/tipologias" element={<Typologies onHiddenMenu={onHiddenMenu} onMajor={onMajor} />} />
         <Route path="/t/as4letras" element={<Home4LetrasAll categoryMenu={"as4letras"} onMajor={onMajor} newLabel={newLabel} newTitle={newTitle} type={type} newType={newType} />} />
         <Route path="/t/as4letras-chosen" element={<Home4LetrasChosen categoryMenu={"as4letras"} onMajor={onMajor} newLabel={newLabel} newTitle={newTitle} type={type} onEmpty={onEmpty} newType={newType} newIndex={newIndex} newChosenfns={newChosenfns} typeTranslator={typeTranslator} />} />
         {navigation === true ? 

@@ -9,7 +9,11 @@ import temperamentos from "../../assets/images/books/temperamentos.jpg";
 import humildade from "../../assets/images/books/humildade.jpg";
 import gifts from "../../assets/images/books/gifts.jpg";
 
-function Books({ newMinor }) {
+function Books({onMajor}) {
+
+  useEffect(() => {
+    onMajor(false)
+  }, [])
 
   return (
     <div className="minor-wrapper">
@@ -25,6 +29,7 @@ function Books({ newMinor }) {
       <div className="minor-container">
 
         <div className="wide-box books">
+
           <div>
             <div>
               Na busca por clareza sobre quem somos nós, estudiosos, psicólogos e filosofos de diferentes eras buscaram identificar características 
@@ -42,7 +47,7 @@ function Books({ newMinor }) {
           <div className="box-grid-books">
 
             <div className="box-grid-books-single a0a">
-              <div><img style={{width: '7em'}} src={tipos} alt=""/></div>
+              <div><img style={{width: '100%'}} src={tipos} alt=""/></div>
                 <div>
                   <div>Tipos psicológicos</div>
                   <div>por C. G. Jung</div>
@@ -52,7 +57,7 @@ function Books({ newMinor }) {
             </div>
 
             <div className="box-grid-books-single a0b">
-              <div><img style={{width: '7em'}} src={gifts} alt=""/></div>
+                <div><img style={{width: '100%'}} src={gifts} alt=""/></div>
                 <div>
                   <div>Gifts Differing: Understanding Personality Type</div>
                   <div>por Isabel Briggs Myers</div>
@@ -62,7 +67,7 @@ function Books({ newMinor }) {
             </div>
             
             <div className="box-grid-books-single b0a">
-              <div><img style={{width: '7em'}} src={temperamentos} alt=""/></div>
+              <div><img style={{width: '100%'}} src={temperamentos} alt=""/></div>
                 <div>
                   <div>Temperamentos transformados</div>
                   <div>por Tim LaHaye</div>
@@ -74,7 +79,7 @@ function Books({ newMinor }) {
             </div>
 
             <div className="box-grid-books-single b0b">
-              <div><img style={{width: '7em'}} src={humildade} alt=""/></div>
+              <div><img style={{width: '100%'}} src={humildade} alt=""/></div>
                 <div>
                   <div>O Poder da Humildade</div>
                   <div>por Steve Gallagher</div>
@@ -87,6 +92,7 @@ function Books({ newMinor }) {
             
           </div>
           <div style={{paddingBottom: '1.2rem'}} className="down-logo"><img src={logo} alt="personality pipe"/></div>
+
         </div>
         
         </div>

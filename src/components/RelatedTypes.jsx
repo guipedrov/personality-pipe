@@ -28,8 +28,8 @@ function RelatedTypes({categoryMenu, type}) {
 
     return (
         <div className="related-types" style={{margin: '0 auto', maxWidth: '880px'}}>
-            <div className="menu-roll-container" style={{margin: '0 auto', display: 'flex', alignItems: 'center'}}>
-                <div style={{alignSelf: 'center', paddingRight: '10px', fontWeight: '600'}}>Forte em:</div>
+            <div className="menu-roll-container related" style={{margin: '0 auto', display: 'flex', alignItems: 'center'}}>
+                <div style={{alignSelf: 'center', paddingRight: '10px', fontWeight: '600', lineHeight: '0.88rem'}}>Forte em:</div>
                 {typesAlonePaired.map((duckTape) => {
                     return <TypeRelated name={duckTape.name} key={duckTape.name} customH={customH} customW={customW} type={duckTape.name} />;
                 })}
